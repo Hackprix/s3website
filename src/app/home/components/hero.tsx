@@ -1,6 +1,6 @@
 "use client"
 import { Timeline } from "./timeline";
-import { NavigationArrow } from "@phosphor-icons/react";
+import { DiscordLogo, InstagramLogo , NavigationArrow, TwitterLogo, LinkedinLogo } from "@phosphor-icons/react";
 
 interface HeroProps {
   targetDate: Date;
@@ -15,42 +15,42 @@ export function Hero({ targetDate }: HeroProps) {
       date: "14.06 at 10 AM",
       title: "Hacking Starts",
       subtitle: "Hacking Starts",
-      image: "https://www.hackprix.tech/_next/image?url=%2Fimages%2Fcarousel%2F7.png&w=640&q=75"
+      image: "/images/regular/7.png"
     },
     {
       id: "2",
       date: "Humans networking",
       title: "Hacking Ends",
       subtitle: "Touching the grass",
-      image: "https://www.hackprix.tech/_next/image?url=%2Fimages%2Fcarousel%2F1.png&w=640&q=75"
+      image: "/images/regular/1.png"
     },
     {
       id: "3",
       date: "Progress check!",
       title: "Mentoring Rounds",
       subtitle: "Mentor-led rounds",
-      image: "https://i.ibb.co/mkkwMkg/DSC04600.jpg"
+      image: "/images/regular/mentor.jpg"
     },
     {
       id: "4",
       date: "15.06 at 11 PM",
       title: "Bonfire",
       subtitle: "Bonfire under the stars",
-      image: "https://www.hackprix.tech/_next/image?url=%2Fimages%2Fcarousel%2F12.png&w=640&q=75"
+      image: "/images/regular/12.png"
     },
     {
       id: "5",
       date: "15.06 at 12 AM",
       title: "Workshop",
       subtitle: "Workshops",
-      image: "https://www.hackprix.tech/_next/image?url=%2Fimages%2Fcarousel%2F16.png&w=640&q=75"
+      image: "/images/regular/16.png"
     },
     {
       id: "6",
       date: "15.06 at 1 AM",
       title: "Mini-games",
       subtitle: "Mini-games",
-      image: "https://www.hackprix.tech/_next/image?url=%2Fimages%2Fcarousel%2F13.png&w=640&q=75"
+      image: "/images/regular/13.png"
     }
   ];
 
@@ -103,13 +103,21 @@ export function Hero({ targetDate }: HeroProps) {
             events={timelineEvents}
           />
         </div>
-        <div className="flex items-start gap-4 mt-4">
+        <div className="flex items-center justify-between mt-4">
+        <div className="flex items-center justify-center">
           <a
             href="mailto:sponsorships@hackprix.tech"
             className="text-center text-lg font-outfit text-black md:text-base hover:underline"
           >
             Interested in sponsoring? Reach out to us!          
           </a>
+        </div>
+        <div className="flex items-center justify-center gap-8">
+          <DiscordLogo size={28} className="cursor-pointer" onClick={() => window.open("https://discord.com/invite/HrFA4B2t4G", "_blank")} />
+          <InstagramLogo size={28} className="cursor-pointer" onClick={() => window.open("https://www.instagram.com/hackprix/", "_blank")} />
+          <TwitterLogo size={28} className="cursor-pointer" onClick={() => window.open("https://twitter.com/hackprix", "_blank")} />
+          <LinkedinLogo size={28} className="cursor-pointer" onClick={() => window.open("https://www.linkedin.com/company/hackprix-hackathon", "_blank")} />
+        </div>
         </div>
       </div>
     </section>
