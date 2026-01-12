@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     description: siteDescription,
     images: [
       {
-        url: "/images/og-image.png", // Make sure this exists later
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
         alt: siteName,
