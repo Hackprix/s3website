@@ -5,10 +5,9 @@ import { cn } from "@/lib/utils";
 import { PhotoStackCard } from "@/components/ui/photo-stack-card";
 
 const navItems = [
-  { href: "/about", label: "ABOUT", number: "01", available: true },
-  { href: "/agenda", label: "AGENDA", number: "02", available: false },
-  { href: "/humans", label: "HUMANS", number: "03", available: false },
-  // { href: "/partners", label: "PARTNERS", number: "04", available: false },
+  { href: "/agenda", label: "AGENDA", number: "01", available: false },
+  { href: "/humans", label: "HUMANS", number: "02", available: false },
+  { href: "/partners", label: "PARTNERS", number: "03", available: true },
 ];
 
 const navColors = [

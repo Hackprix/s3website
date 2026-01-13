@@ -8,11 +8,10 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { href: "/", label: "Home", number: "01", available: true },
-  { href: "/about", label: "About", number: "02", available: false },
+  { href: "/about", label: "About", number: "02", available: true },
   { href: "/agenda", label: "Agenda", number: "03", available: false },
   { href: "/tracks", label: "Tracks", number: "04", available: false },
-  { href: "/sponsors", label: "Sponsors", number: "05", available: false },
-  { href: "/register", label: "Register", number: "06", available: false },
+  { href: "/partners", label: "Partners", number: "05", available: true },
 ];
 
 export function MobileNav() {
