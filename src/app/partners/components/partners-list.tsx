@@ -6,6 +6,8 @@ interface Partner {
   name: string;
   logo: string;
   tier: "Gold" | "Silver" | "Bronze" | "Partner";
+  href?: string;
+  alt?: string;
 }
 
 interface PartnersListProps {
@@ -19,57 +21,40 @@ export function PartnersList({ partners }: PartnersListProps) {
   const bronzePartners = partners.filter((p) => p.tier === "Bronze");
   const generalPartners = partners.filter((p) => p.tier === "Partner");
 
+  const renderPartner = (partner: Partner) => (
+    <PartnerCard
+      key={partner.name}
+      name={partner.name}
+      logo={partner.logo}
+      tier={partner.tier}
+      href={partner.href}
+      alt={partner.alt}
+    />
+  );
+
   return (
     <div className="flex flex-col gap-16 py-12">
       {goldPartners.length > 0 && (
         <div className="flex flex-wrap justify-center gap-8">
-          {goldPartners.map((partner) => (
-            <PartnerCard
-              key={partner.name}
-              name={partner.name}
-              logo={partner.logo}
-              tier={partner.tier}
-            />
-          ))}
+          {goldPartners.map(renderPartner)}
         </div>
       )}
 
       {silverPartners.length > 0 && (
         <div className="flex flex-wrap justify-center gap-8">
-          {silverPartners.map((partner) => (
-            <PartnerCard
-              key={partner.name}
-              name={partner.name}
-              logo={partner.logo}
-              tier={partner.tier}
-            />
-          ))}
+          {silverPartners.map(renderPartner)}
         </div>
       )}
 
       {bronzePartners.length > 0 && (
         <div className="flex flex-wrap justify-center gap-8">
-          {bronzePartners.map((partner) => (
-            <PartnerCard
-              key={partner.name}
-              name={partner.name}
-              logo={partner.logo}
-              tier={partner.tier}
-            />
-          ))}
+          {bronzePartners.map(renderPartner)}
         </div>
       )}
 
       {generalPartners.length > 0 && (
         <div className="flex flex-wrap justify-center gap-8">
-          {generalPartners.map((partner) => (
-            <PartnerCard
-              key={partner.name}
-              name={partner.name}
-              logo={partner.logo}
-              tier={partner.tier}
-            />
-          ))}
+          {generalPartners.map(renderPartner)}
         </div>
       )}
     </div>

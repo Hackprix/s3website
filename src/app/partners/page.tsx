@@ -10,6 +10,8 @@ interface Partner {
   name: string;
   logo: string;
   tier: "Gold" | "Silver" | "Bronze" | "Partner";
+  href?: string;
+  alt?: string;
 }
 
 const partnersData: Partner[] = [
@@ -17,6 +19,8 @@ const partnersData: Partner[] = [
     name: "Devfolio",
     logo: "/partners/devfolio.svg",
     tier: "Gold",
+    href: "https://devfolio.co",
+    alt: "DEVFOLIO LOGO",
   },
 ];
 
